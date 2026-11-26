@@ -96,15 +96,15 @@ int main()
     Test("单结点", NewNode('A'), true);
 
     //       A
-    //      / |\
+    //      / |
     //     B   C
-    //    / |\
+    //    / |
     //   D   E           -> 完全
     Test("5 结点完全二叉树",
          NewNode('A', NewNode('B', NewNode('D'), NewNode('E')), NewNode('C')), true);
 
     //       A
-    //      / |\
+    //      / |
     //     B   C
     //      |       B 只有右孩子 -> 有空洞
     Test("B 只有右孩子",
@@ -119,7 +119,7 @@ int main()
          NewNode('A', NewNode('B', NULL, NewNode('D')), NULL), false);
 
     //       A
-    //      / |\
+    //      / |
     //     B   C
     //      |  |
     //       D   E        -> 非完全（C 的左孩子空、右孩子非空）
@@ -127,7 +127,7 @@ int main()
          NewNode('A', NewNode('B', NULL, NewNode('D')), NewNode('C', NULL, NewNode('E'))), false);
 
     //       A
-    //      / |\
+    //      / |
     //     B   C           -> 满二叉树，也是完全二叉树
     Test("满二叉树", NewNode('A', NewNode('B'), NewNode('C')), true);
 
